@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="first-column">
+      <input type="number" (change)="inputChange($event)" [(ngModel)]="currentInputNumber">
+    </div>
+    <div class="middle-column">
+      <select id="dropdown-input-field" (change)="dropdownChange($event)" [(ngModel)]="selectedOption">
+        <option *ngFor="let option of options">
+          {{ option.name }}
+        </option>
+      </select>
+    </div>
+  <div class="last-column">
+  {{ result }}
+  </div>
+
+</div>
